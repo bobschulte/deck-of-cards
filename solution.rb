@@ -15,11 +15,7 @@ class Deck
   end
 
   def choose_card
-    chosen_card = cards[rand(0..51)]
-    cards.delete_if do | card |
-      card == chosen_card
-    end
-    chosen_card
+    chosen_card = cards.delete_at(rand(0..51))
   end
 
 end
